@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "zafar-portfolio-4134f"
-  }
+  },
+  "targets": {
+    "zafar-portfolio-4134f": {
+      "hosting": {
+        "portfolio": [
+          "zfar"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
