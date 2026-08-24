@@ -268,14 +268,14 @@ a.tag:hover{ border-color: var(--accent); background: rgba(45,212,191,0.08); }
 .blog-year:first-of-type{ margin-top:0; }
 .blog-year-rule{ border:none; border-top:1px solid var(--border); margin: 0 0 8px; }
 
-.timeline-grid{ display:grid; grid-template-columns: repeat(2, 1fr); column-gap: 24px; }
+.timeline-grid{ display:flex; flex-direction:column; }
 .timeline-item{
-  display:flex; align-items:baseline; gap:16px;
+  display:flex; align-items:baseline; gap:20px;
   padding: 14px 10px; margin: 0 -10px; border-radius:6px;
   border-top:1px solid var(--border);
   transition: background .15s ease;
 }
-.timeline-item:nth-child(-n+2){ border-top:none; }
+.timeline-item:first-child{ border-top:none; }
 .timeline-item:hover{ background: rgba(45,212,191,0.08); }
 .timeline-item span{ color: var(--text-muted); font-size:0.95rem; line-height:1.4; }
 .timeline-item:hover span{ color: var(--text); }
@@ -303,9 +303,6 @@ a.tag:hover{ border-color: var(--accent); background: rgba(45,212,191,0.08); }
   .hero, .stats, .section, .footer{ padding-left:24px; padding-right:24px; }
   .blog-main{ padding: 0 24px; }
   .stats{ grid-template-columns: 1fr; text-align:center; }
-  .timeline-grid{ grid-template-columns: 1fr; }
-  .timeline-item:nth-child(-n+2){ border-top:1px solid var(--border); }
-  .timeline-item:first-child{ border-top:none; }
 }
 
 /* ---------- Focus states ---------- */
