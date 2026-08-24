@@ -100,13 +100,13 @@ a{ color: inherit; text-decoration: none; }
 }
 .sidebar__cv{ text-align:center; padding: 10px 16px; }
 
-.sidebar__socials{ display:flex; gap:6px; padding: 6px 10px 0; }
+.sidebar__socials{ display:flex; flex-direction:row; gap:4px; padding: 6px 10px 0; }
 .sidebar__social-link{
   display:flex; align-items:center; justify-content:center;
-  width:32px; height:32px; border-radius:6px; color: var(--text-muted);
+  width:22px; height:22px; border-radius:5px; color: var(--text-muted);
   transition: background .15s ease, color .15s ease;
 }
-.sidebar__social-link svg{ width:16px; height:16px; }
+.sidebar__social-link svg{ width:12px; height:12px; }
 .sidebar__social-link:hover{ background: rgba(148,163,184,0.07); color: var(--accent); }
 
 .page{ margin-left: var(--sidebar-width); min-height:100vh; }
