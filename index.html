@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zafar Mahmood — Data Engineer</title>
+<meta name="description" content="Zafar Mahmood, Data Engineer with 6 years of experience building pipelines, warehouses, and data infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<aside class="sidebar">
+  <div class="sidebar__profile">
+    <div class="sidebar__avatar">
+      <img src="avatar.jpg" alt="Zafar Mahmood">
+    </div>
+    <div class="sidebar__id">
+      <span class="sidebar__name">Zafar Mahmood</span>
+      <span class="sidebar__role">Data Engineer</span>
+    </div>
+  </div>
+
+  <nav class="sidebar__nav">
+    <a href="index.html" class="sidebar__link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Home
+    </a>
+    <a href="index.html#projects" class="sidebar__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Projects
+    </a>
+    <a href="blog.html" class="sidebar__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4z"/></svg>
+      Blog
+    </a>
+    <a href="index.html#videos" class="sidebar__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+      Videos
+    </a>
+    <a href="index.html#contact" class="sidebar__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+      Contact
+    </a>
+  </nav>
+
+  <div class="sidebar__footer">
+    <a href="Zafar_Mahmood_CV.pdf" target="_blank" rel="noopener" class="btn btn--primary sidebar__cv">Download CV ↗</a>
+    <a href="https://github.com/zfar-" target="_blank" rel="noopener" class="sidebar__social">GitHub ↗</a>
+  </div>
+</aside>
+
+<div class="page">
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__eyebrow">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      SELECT * FROM engineers WHERE role = 'data' AND experience_years = 6;
+    </div>
+    <h1 class="hero__title">
+      Zafar Mahmood<br>
+      <span class="hero__title-sub">builds pipelines that don't page you at 3am.</span>
+    </h1>
+    <p class="hero__desc">
+      Data Engineer with 6 years of experience turning messy, high-volume data into
+      systems people can trust — warehouses, ETL/ELT pipelines, and the infrastructure
+      underneath them.
+      <span class="placeholder-hint">[Edit this line: name your specialty — streaming, cloud migrations, platform work, etc.]</span>
+    </p>
+    <div class="hero__actions">
+      <a href="https://github.com/zfar-" target="_blank" rel="noopener" class="btn btn--primary">GitHub ↗</a>
+      <a href="Zafar_Mahmood_CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost">Download CV</a>
+    </div>
+
+    <!-- SIGNATURE ELEMENT: animated data pipeline -->
+    <div class="pipeline" role="img" aria-label="Animated diagram of a data pipeline: raw sources flowing through ingest, transform, and warehouse stages, output to dashboards and models.">
+      <svg viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg" class="pipeline__svg">
+        <!-- connecting line -->
+        <line x1="60" y1="80" x2="840" y2="80" stroke="#1E293B" stroke-width="2"/>
+        <line class="flow-line" x1="60" y1="80" x2="840" y2="80" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="6 10"/>
+
+        <!-- node: sources -->
+        <g class="pnode">
+          <rect x="30" y="55" width="90" height="50" rx="6" fill="#0F172A" stroke="#334155"/>
+          <text x="75" y="76" text-anchor="middle" class="pnode__label">sources</text>
+          <text x="75" y="92" text-anchor="middle" class="pnode__sub">api · db · logs</text>
+        </g>
+
+        <!-- node: ingest -->
+        <g class="pnode" style="animation-delay:.4s">
+          <rect x="220" y="50" width="100" height="60" rx="6" fill="#0F172A" stroke="#2DD4BF"/>
+          <text x="270" y="76" text-anchor="middle" class="pnode__label pnode__label--accent">ingest</text>
+          <text x="270" y="92" text-anchor="middle" class="pnode__sub">Kafka</text>
+        </g>
+
+        <!-- node: transform -->
+        <g class="pnode" style="animation-delay:.8s">
+          <rect x="410" y="50" width="100" height="60" rx="6" fill="#0F172A" stroke="#2DD4BF"/>
+          <text x="460" y="76" text-anchor="middle" class="pnode__label pnode__label--accent">transform</text>
+          <text x="460" y="92" text-anchor="middle" class="pnode__sub">Spark · dbt</text>
+        </g>
+
+        <!-- node: warehouse -->
+        <g class="pnode" style="animation-delay:1.2s">
+          <rect x="600" y="50" width="100" height="60" rx="6" fill="#0F172A" stroke="#2DD4BF"/>
+          <text x="650" y="76" text-anchor="middle" class="pnode__label pnode__label--accent">warehouse</text>
+          <text x="650" y="92" text-anchor="middle" class="pnode__sub">Snowflake</text>
+        </g>
+
+        <!-- node: output -->
+        <g class="pnode" style="animation-delay:1.6s">
+          <rect x="780" y="55" width="90" height="50" rx="6" fill="#0F172A" stroke="#334155"/>
+          <text x="825" y="76" text-anchor="middle" class="pnode__label">output</text>
+          <text x="825" y="92" text-anchor="middle" class="pnode__sub">BI · ML</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT / STATS -->
+  <section class="stats">
+    <div class="stat">
+      <div class="stat__num">6</div>
+      <div class="stat__label">years in data engineering</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">[N]</div>
+      <div class="stat__label">pipelines shipped to production<span class="placeholder-hint-inline">edit</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">[N]TB+</div>
+      <div class="stat__label">data processed daily<span class="placeholder-hint-inline">edit</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section__title"><span class="section__num">01</span> Projects</h2>
+    <p class="section__intro placeholder-hint">Replace these three cards with your real projects — each one supports a code snippet and a GitHub link.</p>
+
+    <div class="projects">
+      <article class="project-card">
+        <div class="project-card__head">
+          <h3>[Project Name]</h3>
+          <span class="tag">Python · Airflow</span>
+        </div>
+        <p>One or two sentences on the problem this solved and the outcome — use a number if you can (e.g. "cut pipeline runtime from 4h to 40min").</p>
+        <pre class="code-block"><code><span class="c-kw">def</span> <span class="c-fn">extract_and_load</span>(source, dest):
+    <span class="c-kw">with</span> source.stream() <span class="c-kw">as</span> batch:
+        transformed = transform(batch)
+        dest.write(transformed)
+    <span class="c-kw">return</span> <span class="c-kw">len</span>(transformed)</code></pre>
+        <a href="https://github.com/zfar-" target="_blank" rel="noopener" class="project-card__link">View on GitHub ↗</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__head">
+          <h3>[Project Name]</h3>
+          <span class="tag">Spark · dbt</span>
+        </div>
+        <p>What the pipeline/system does, the scale it runs at, and why it mattered to the business or team.</p>
+        <pre class="code-block"><code><span class="c-kw">SELECT</span> user_id, <span class="c-fn">COUNT</span>(*) <span class="c-kw">AS</span> events
+<span class="c-kw">FROM</span> raw.events
+<span class="c-kw">WHERE</span> event_date >= CURRENT_DATE - <span class="c-num">7</span>
+<span class="c-kw">GROUP BY</span> user_id;</code></pre>
+        <a href="https://github.com/zfar-" target="_blank" rel="noopener" class="project-card__link">View on GitHub ↗</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__head">
+          <h3>[Project Name]</h3>
+          <span class="tag">AWS · Terraform</span>
+        </div>
+        <p>Describe the infra you built or migrated — cost savings, reliability wins, or scale handled.</p>
+        <pre class="code-block"><code><span class="c-kw">resource</span> <span class="c-str">"aws_glue_job"</span> <span class="c-str">"etl"</span> {
+  name     = <span class="c-str">"daily-etl"</span>
+  role_arn = aws_iam_role.glue.arn
+}</code></pre>
+        <a href="https://github.com/zfar-" target="_blank" rel="noopener" class="project-card__link">View on GitHub ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos" class="section">
+    <h2 class="section__title"><span class="section__num">02</span> Videos</h2>
+    <p class="section__intro placeholder-hint">Replace the src below with your real YouTube video/channel embed links.</p>
+    <div class="videos">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section id="blog-preview" class="section">
+    <h2 class="section__title"><span class="section__num">03</span> Writing</h2>
+    <p class="section__intro">Notes on pipelines, data platforms, and things I learned the hard way. <a href="blog.html" class="inline-link">Read the blog →</a></p>
+  </section>
+
+  <!-- CONTACT / SUPPORT -->
+  <section id="contact" class="section section--contact">
+    <h2 class="section__title"><span class="section__num">04</span> Get in touch</h2>
+    <div class="contact-cards">
+      <a href="https://calendly.com/yourname/30min" target="_blank" rel="noopener" class="contact-card">
+        <h3>Book a call</h3>
+        <p>Happy to talk shop, hiring, or collaboration.</p>
+        <span class="contact-card__cta">Open Calendly ↗</span>
+      </a>
+      <a href="https://ko-fi.com/yourname" target="_blank" rel="noopener" class="contact-card">
+        <h3>Buy me a coffee</h3>
+        <p>If a post or a repo saved you time.</p>
+        <span class="contact-card__cta">Open Ko-fi ↗</span>
+      </a>
+      <a href="https://github.com/zfar-" target="_blank" rel="noopener" class="contact-card">
+        <h3>GitHub</h3>
+        <p>Code, pipelines, and side projects.</p>
+        <span class="contact-card__cta">github.com/zfar- ↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Zafar Mahmood</span>
+  <span class="footer__dot">·</span>
+  <span>Built with a static site, no framework required</span>
+</footer>
+
+</div>
+
+</body>
+</html>
