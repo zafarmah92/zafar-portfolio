@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+navActive: blog
+---
+<main class="blog-main">
+  <a href="/blog/" class="inline-link post__back">← Back to writing</a>
+
+  <article class="post">
+    <header class="post__header">
+      <div class="post__meta">
+        <time>{{ date | dateDisplay }}</time>
+        <span class="post__meta-dot">·</span>
+        <span class="post__tag">{{ category }}</span>
+        <span class="post__meta-dot">·</span>
+        <span class="post__readtime">{{ content | readingTime }} min read</span>
+      </div>
+      <h1>{{ title }}</h1>
+    </header>
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <span>© 2026 Zafar Mahmood</span>
+  <span class="footer__dot">·</span>
+  <span><a href="/blog/" class="inline-link">Back to writing</a></span>
+</footer>

@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Blog — Zafar Mahmood
+description: "Notes on data engineering: pipelines, warehouses, and infrastructure, by Zafar Mahmood."
+navActive: blog
+permalink: /blog/
+---
+<main class="blog-main">
+
+  <section class="blog-hero">
+    <div class="hero__eyebrow">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      /var/log/blog — {{ collections.posts.length }} posts
+    </div>
+    <h1 class="blog-hero__title">Writing</h1>
+    <p class="blog-hero__desc">Long-form notes on pipelines, warehouses, and the failures that taught me the most.</p>
+  </section>
+
+  <div class="post-list">
+    {% for post in collections.posts | reverse %}
+    <article class="post-list__item">
+      <div class="post__meta">
+        <time>{{ post.data.date | dateDisplay }}</time>
+        <span class="post__meta-dot">·</span>
+        <span class="post__tag">{{ post.data.category }}</span>
+        <span class="post__meta-dot">·</span>
+        <span class="post__readtime">{{ post.templateContent | readingTime }} min read</span>
+      </div>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <p>{{ post.data.description }}</p>
+      <a href="{{ post.url }}" class="post-list__link">Read more →</a>
+    </article>
+    {% endfor %}
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Zafar Mahmood</span>
+  <span class="footer__dot">·</span>
+  <span><a href="/" class="inline-link">Back to home</a></span>
+</footer>
