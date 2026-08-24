@@ -18,22 +18,19 @@ permalink: /blog/
 
   <div class="tag-cloud">
     {% for item in collections.tagCounts %}
-    <a href="/blog/tags/{{ item.tag | slug }}/" class="tag-count">{{ item.tag }} <span class="tag-count__n">{{ item.count }}</span></a>
+    <a href="/blog/tags/{{ item.tag | slug }}/" class="tag-count">{{ item.tag }}: {{ item.count }}</a>
     {% endfor %}
   </div>
 
   {% for group in collections.postsByYear %}
-  <h2 class="blog-year">
-    {{ group.year }}
-    <span class="blog-year__count">{{ group.posts.length }} article{% if group.posts.length != 1 %}s{% endif %}</span>
-  </h2>
+  <h2 class="blog-year">{{ group.year }}</h2>
   <hr class="blog-year-rule">
   <div class="timeline-grid">
     {% for post in group.posts %}
-    <article class="timeline-item">
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <a href="{{ post.url }}" class="timeline-item">
       <time>{{ post.date | dateShort }}</time>
-    </article>
+      <span>{{ post.data.title }}</span>
+    </a>
     {% endfor %}
   </div>
   {% endfor %}

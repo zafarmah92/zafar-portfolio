@@ -254,34 +254,33 @@ a.tag:hover{ border-color: var(--accent); background: rgba(45,212,191,0.08); }
 /* ---------- Blog index: tag cloud ---------- */
 .tag-cloud{ display:flex; flex-wrap:wrap; gap:10px; margin: 8px 0 44px; }
 .tag-count{
-  display:inline-flex; align-items:center; gap:6px;
   font-family: var(--font-display); font-size:0.78rem; color: var(--text-muted);
-  border:1px solid var(--border); border-radius:999px; padding:6px 14px;
-  transition: border-color .15s ease, color .15s ease;
+  border:1px solid var(--border); border-radius:6px; padding:6px 14px;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
 }
-.tag-count:hover{ border-color: var(--accent); color: var(--text); }
-.tag-count__n{ color: var(--text-dim); font-size:0.72rem; }
-.tag-count:hover .tag-count__n{ color: var(--accent); }
+.tag-count:hover{ background: var(--accent); border-color: var(--accent); color: #06251F; }
 
 /* ---------- Blog index: timeline ---------- */
 .blog-year{
-  display:flex; align-items:baseline; gap:12px;
   font-family: var(--font-display); font-weight:800; font-size:1.5rem; color: var(--accent-2);
   margin: 44px 0 12px;
 }
 .blog-year:first-of-type{ margin-top:0; }
-.blog-year__count{ font-family: var(--font-body); font-weight:400; font-size:0.82rem; color: var(--text-dim); }
 .blog-year-rule{ border:none; border-top:1px solid var(--border); margin: 0 0 8px; }
 
-.timeline-grid{ display:grid; grid-template-columns: repeat(2, 1fr); column-gap: 40px; }
+.timeline-grid{ display:grid; grid-template-columns: repeat(2, 1fr); column-gap: 24px; }
 .timeline-item{
-  display:flex; align-items:baseline; justify-content:space-between; gap:16px;
-  padding: 14px 0; border-top:1px solid var(--border);
+  display:flex; align-items:baseline; gap:16px;
+  padding: 14px 10px; margin: 0 -10px; border-radius:6px;
+  border-top:1px solid var(--border);
+  transition: background .15s ease;
 }
 .timeline-item:nth-child(-n+2){ border-top:none; }
-.timeline-item a{ color: var(--text-muted); font-size:0.95rem; line-height:1.4; }
-.timeline-item a:hover{ color: var(--accent); }
+.timeline-item:hover{ background: rgba(45,212,191,0.08); }
+.timeline-item span{ color: var(--text-muted); font-size:0.95rem; line-height:1.4; }
+.timeline-item:hover span{ color: var(--text); }
 .timeline-item time{ font-family: var(--font-display); font-size:0.78rem; color: var(--text-dim); white-space:nowrap; flex-shrink:0; }
+.timeline-item:hover time{ color: var(--accent); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 880px){
