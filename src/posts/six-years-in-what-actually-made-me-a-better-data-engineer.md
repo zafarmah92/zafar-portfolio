@@ -1,7 +1,7 @@
 ---
 title: "Six Years In: What Actually Made Me a Better Data Engineer"
 date: 2026-03-18
-category: Career
+tags: [Career]
 description: It wasn't a new framework. Three unglamorous habits — reading query plans, owning an incident end-to-end, and learning to say no to a table — compounded more than any tool did.
 ---
 It wasn't a new tool. Every year there's a new framework promising to fix

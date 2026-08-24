@@ -1,7 +1,7 @@
 ---
 title: Why We Stopped Modeling the Warehouse Around Dashboards
 date: 2026-02-03
-category: Warehousing
+tags: [Warehousing, Data Modeling]
 description: Six different definitions of "active user" scattered across dashboard-specific tables taught us to model the business once, not once per dashboard.
 ---
 For the first year of our warehouse's life, every table existed because a

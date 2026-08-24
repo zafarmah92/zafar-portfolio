@@ -17,6 +17,22 @@ module.exports = function (eleventyConfig) {
     new Date(date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
   );
 
+  eleventyConfig.addFilter("slug", (str) =>
+    String(str).toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
+  );
+
+  // Every unique post tag except the internal "posts" collection marker,
+  // used to generate one archive page per tag.
+  eleventyConfig.addCollection("tagList", (collectionApi) => {
+    const tagSet = new Set();
+    collectionApi.getFilteredByTag("posts").forEach((post) => {
+      (post.data.tags || []).forEach((tag) => {
+        if (tag !== "posts") tagSet.add(tag);
+      });
+    });
+    return [...tagSet].sort();
+  });
+
   return {
     dir: {
       input: "src",

@@ -10,11 +10,10 @@ navActive: blog
       <div class="post__meta">
         <time>{{ date | dateDisplay }}</time>
         <span class="post__meta-dot">·</span>
-        <span class="post__tag">{{ category }}</span>
-        <span class="post__meta-dot">·</span>
         <span class="post__readtime">{{ content | readingTime }} min read</span>
       </div>
       <h1>{{ title }}</h1>
+      {% include "partials/tag-pills.njk" %}
     </header>
     <div class="post__body">
       {{ content | safe }}

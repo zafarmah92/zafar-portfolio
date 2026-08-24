@@ -1,7 +1,7 @@
 ---
 title: The 3am Page That Taught Me to Design for Failure
 date: 2026-01-12
-category: Pipelines
+tags: [Pipelines, Reliability]
 description: A silent data-loss incident taught me that most pipeline failures don't look like failures at all — and changed how I monitor everything I build.
 ---
 Two years into my career, I got paged at 3am because a pipeline had silently

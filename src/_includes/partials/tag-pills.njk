@@ -1,0 +1,3 @@
+<div class="post-tags">
+  {% for tag in tags %}{% if tag != "posts" %}<a href="/blog/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% endif %}{% endfor %}
+</div>
