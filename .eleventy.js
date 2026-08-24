@@ -17,6 +17,10 @@ module.exports = function (eleventyConfig) {
     new Date(date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
   );
 
+  eleventyConfig.addFilter("dateShort", (date) =>
+    new Date(date).toLocaleDateString("en-US", { month: "short", day: "2-digit" })
+  );
+
   eleventyConfig.addFilter("slug", (str) =>
     String(str).toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
   );
@@ -31,6 +35,35 @@ module.exports = function (eleventyConfig) {
       });
     });
     return [...tagSet].sort();
+  });
+
+  // Tag → post count, sorted most-used first, for the tag cloud at the top of the blog index.
+  eleventyConfig.addCollection("tagCounts", (collectionApi) => {
+    const counts = {};
+    collectionApi.getFilteredByTag("posts").forEach((post) => {
+      (post.data.tags || []).forEach((tag) => {
+        if (tag !== "posts") counts[tag] = (counts[tag] || 0) + 1;
+      });
+    });
+    return Object.entries(counts)
+      .map(([tag, count]) => ({ tag, count }))
+      .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+  });
+
+  // Posts grouped by year, newest year first, for the timeline on the blog index.
+  eleventyConfig.addCollection("postsByYear", (collectionApi) => {
+    const posts = collectionApi.getFilteredByTag("posts").sort((a, b) => b.date - a.date);
+    const groups = [];
+    const indexByYear = {};
+    posts.forEach((post) => {
+      const year = post.date.getFullYear();
+      if (!(year in indexByYear)) {
+        indexByYear[year] = groups.length;
+        groups.push({ year, posts: [] });
+      }
+      groups[indexByYear[year]].posts.push(post);
+    });
+    return groups;
   });
 
   return {

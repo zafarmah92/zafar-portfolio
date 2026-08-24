@@ -16,22 +16,27 @@ permalink: /blog/
     <p class="blog-hero__desc">Long-form notes on pipelines, warehouses, and the failures that taught me the most.</p>
   </section>
 
-  <div class="post-list">
-    {% for post in collections.posts | reverse %}
-    <article class="post-list__item">
-      <div class="post__meta">
-        <time>{{ post.data.date | dateDisplay }}</time>
-        <span class="post__meta-dot">·</span>
-        <span class="post__readtime">{{ post.templateContent | readingTime }} min read</span>
-      </div>
-      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-      <p>{{ post.data.description }}</p>
-      {% set tags = post.data.tags %}
-      {% include "partials/tag-pills.njk" %}
-      <a href="{{ post.url }}" class="post-list__link">Read more →</a>
+  <div class="tag-cloud">
+    {% for item in collections.tagCounts %}
+    <a href="/blog/tags/{{ item.tag | slug }}/" class="tag-count">{{ item.tag }} <span class="tag-count__n">{{ item.count }}</span></a>
+    {% endfor %}
+  </div>
+
+  {% for group in collections.postsByYear %}
+  <h2 class="blog-year">
+    {{ group.year }}
+    <span class="blog-year__count">{{ group.posts.length }} article{% if group.posts.length != 1 %}s{% endif %}</span>
+  </h2>
+  <hr class="blog-year-rule">
+  <div class="timeline-grid">
+    {% for post in group.posts %}
+    <article class="timeline-item">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <time>{{ post.date | dateShort }}</time>
     </article>
     {% endfor %}
   </div>
+  {% endfor %}
 
 </main>
 
