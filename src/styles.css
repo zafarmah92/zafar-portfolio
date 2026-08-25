@@ -105,6 +105,13 @@ a{ color: inherit; text-decoration: none; }
 .sidebar__social-link--linkedin{ background:#0A66C2; }
 .sidebar__social-link--github{ background:#24292F; }
 
+.sidebar__badge{
+  align-self:flex-start;
+  font-family: var(--font-display); font-size:0.68rem; color: var(--text-dim);
+  border:1px dashed var(--border); border-radius:999px; padding:4px 10px;
+  margin-top:16px;
+}
+
 .page{ margin-left: var(--sidebar-width); min-height:100vh; }
 
 /* ---------- Hero ---------- */
