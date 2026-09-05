@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/styles.css");
   eleventyConfig.addPassthroughCopy("src/avatar.jpg");
+  eleventyConfig.addPassthroughCopy("src/scroll-spy.js");
   eleventyConfig.addPassthroughCopy({ "404.html": "404.html" });
 
   eleventyConfig.addFilter("readingTime", (text) => {
