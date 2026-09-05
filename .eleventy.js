@@ -65,6 +65,11 @@ module.exports = function (eleventyConfig) {
     return groups;
   });
 
+  // Newest 3 posts, for the blog preview on the home page.
+  eleventyConfig.addCollection("recentPosts", (collectionApi) =>
+    collectionApi.getFilteredByTag("posts").sort((a, b) => b.date - a.date).slice(0, 3)
+  );
+
   return {
     dir: {
       input: "src",

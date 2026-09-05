@@ -138,8 +138,17 @@ permalink: /
 
   <!-- BLOG PREVIEW -->
   <section id="blog-preview" class="section">
-    <h2 class="section__title"><span class="section__num">02</span> Writing</h2>
+    <h2 class="section__title"><span class="section__num">02</span> Blog</h2>
     <p class="section__intro">Notes on pipelines, data platforms, and things I learned the hard way. <a href="/blog/" class="inline-link">Read the blog →</a></p>
+
+    <div class="timeline-grid">
+      {% for post in collections.recentPosts %}
+      <a href="{{ post.url }}" class="timeline-item">
+        <time>{{ post.date | dateShort }}</time>
+        <span>{{ post.data.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
   </section>
 
   <!-- CONTACT / SUPPORT -->
