@@ -211,9 +211,10 @@ a{ color: inherit; text-decoration: none; }
   width:10px; height:10px; border-radius:50%;
   background: var(--accent); border:2px solid var(--bg);
 }
-.timeline-entry__meta{ font-family: var(--font-display); font-size:0.76rem; color: var(--text-dim); margin-bottom:4px; }
+.timeline-entry__head{ display:flex; align-items:baseline; justify-content:space-between; gap:14px; }
 .timeline-entry__role{ font-weight:700; color: var(--text); font-size:0.98rem; }
-.timeline-entry__company{ color: var(--text-muted); font-size:0.9rem; }
+.timeline-entry__meta{ font-family: var(--font-display); font-size:0.76rem; color: var(--text-dim); white-space:nowrap; flex-shrink:0; }
+.timeline-entry__company{ color: var(--text-muted); font-size:0.9rem; margin-top:4px; }
 
 /* ---------- Projects ---------- */
 .projects{ display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 24px; }
